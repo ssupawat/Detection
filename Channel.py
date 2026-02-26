@@ -7,6 +7,11 @@ def generate_noise(variance, n):
     return np.random.normal(0, np.sqrt(variance), n)
 
 
+def generate_correlated_noise(noise_cov_matrix, n):
+    samples = np.random.multivariate_normal([0, 0, 0], noise_cov_matrix, n)
+    return samples[:, 0], samples[:, 1], samples[:, 2]
+
+
 # def received_voltage(s_array, variance):
 #     r_array = []
 #     for s in s_array:
