@@ -48,7 +48,7 @@ if __name__ == "__main__":
     r2 = received_voltage(s, var2)
     r3 = received_voltage(s, var3)
 
-    result = detection(Pm0, E, r1, r2, r3, var1, var2, var3)
+    result = detection(Pm0, E, r1, r2, r3, var1, var2, var3, decision="optimal")
     print(s)
     print(r1)
     print(r2)
